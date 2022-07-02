@@ -1,10 +1,17 @@
+import { useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 
+import { MenuContext } from "./components/Context/MenuContext";
+
 function App() {
+  const [isMenuShown, setIsMenuShown] = useState(false);
+
   return (
-   <>
-     <Navbar/>
-   </>
+    <>
+      <MenuContext.Provider value={{isMenuShown,setIsMenuShown}}>
+        <Navbar />
+      </MenuContext.Provider>
+    </>
   );
 }
 
