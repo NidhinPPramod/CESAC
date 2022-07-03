@@ -5,6 +5,7 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { MenuContext } from "../Context/MenuContext";
 
 const Navbar = () => {
+  
   const { isMenuShown, setIsMenuShown } = useContext(MenuContext);
 
   const navItems = [
@@ -35,14 +36,14 @@ const Navbar = () => {
       <div className="absolute w-full h-24 bg-black text-white z-20">
         <div className="flex justify-between items-center max-w-screen-xl mx-auto px-4 h-full">
           <div>
-            <h1 className="text-thBlue tracking-widest text-3xl">CESAC</h1>
+            <h1 className="text-thViolet tracking-widest text-3xl">CESAC</h1>
           </div>
           <div className="hidden lg:flex items-center">
             <ul className="flex">
               {navItems.map(({ id, link }) => {
                 return (
                   <li
-                    className="p-4 uppercase duration-200 hover:text-thBlue cursor-pointer"
+                    className="p-4 uppercase duration-200 hover:text-thViolet cursor-pointer"
                     key={id}
                   >
                     {link}
