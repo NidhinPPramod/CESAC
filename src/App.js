@@ -7,6 +7,8 @@ import HeroSection from "./components/HeroSection/HeroSection";
 function App() {
   const [isMenuShown, setIsMenuShown] = useState(false);
 
+
+
   return (
     <>
       <MenuContext.Provider value={{isMenuShown,setIsMenuShown}}>
